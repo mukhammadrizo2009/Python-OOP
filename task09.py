@@ -10,15 +10,16 @@ class User:
         self.email    = email
         self.isactive = is_active
         
-        def active():
-            return None
+    def activate(self):
+        self.is_active = True
+        print(f"{self.username} faol emas.")
+
+    def deactivate(self):
+        self.is_active = False
+        print(f"{self.username} faol.")
         
-        def deactive():
-            return None
-        
-user01 = User('sherkhon01' , 'sherkhon01gmail.com' , True)
+user01 = User('sherkhon01' , 'sherkhon01gmail.com' , False)
 user02 = User('oqayiq0000' , 'oqayiq.uzgmail.com' , True)
 
-
-print(f"Username = {user01.username} | Gmail = {user01.email} | Active = {user01.isactive}")
-print(f"Username = {user02.username} | Gmail = {user02.email} | Active = {user02.isactive}")
+user01.activate()
+user02.deactivate()
